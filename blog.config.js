@@ -15,11 +15,11 @@ const BLOG = {
   // After version 3.14.1, welcome to configuration here, and the English comma is separated to support multiple welcome typing effects。
   GREETING_WORDS: process.env.NEXT_PUBLIC_GREETING_WORDS || 'To the cold moon and back, Noone was there ! ',
 
-  CUSTOM_MENU: process.env.NEXT_PUBLIC_CUSTOM_MENU || true, // Support the Menu type. From the 3.12.0 version, each theme will gradually support flexible secondary menu configuration to replace the original Page type. This configuration is the test function, the default shutdown is closed。
+  CUSTOM_MENU: process.env.NEXT_PUBLIC_CUSTOM_MENU || false, // Support the Menu type. From the 3.12.0 version, each theme will gradually support flexible secondary menu configuration to replace the original Page type. This configuration is the test function, the default shutdown is closed。
 
   AUTHOR: process.env.NEXT_PUBLIC_AUTHOR || 'Noone', // Your nickname, such as tangly1024
   BIO: process.env.NEXT_PUBLIC_BIO || 'Noone on the moon', // About the Author
-  LINK: process.env.NEXT_PUBLIC_LINK || 'https://coldmoon.vercel.app', // Website address
+  LINK: process.env.NEXT_PUBLIC_LINK || 'https://thecoldmoon.vercel.app', // Website address
   KEYWORDS: process.env.NEXT_PUBLIC_KEYWORD || 'Noone, cold moon', // Website keyword English comma is separated
 
   // 社交链接，不需要可留空白，例如 CONTACT_WEIBO:''
