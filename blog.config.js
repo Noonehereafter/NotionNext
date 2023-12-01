@@ -6,7 +6,7 @@ const BLOG = {
   PSEUDO_STATIC: process.env.NEXT_PUBLIC_PSEUDO_STATIC || false, // The pseudo -static path, all articles URL ended at HTML after opening。
   NEXT_REVALIDATE_SECOND: process.env.NEXT_PUBLIC_REVALIDATE_SECOND || 3, // Update the content cache separate unit (second); that is, each page has a pure static period of 5 seconds, no matter how many access this period, it will not capture the NOTION data; the value of the larger value will help save Vercel resources and increase the access rate at the same time , But it will also make the article update delay。
   THEME: process.env.NEXT_PUBLIC_THEME || 'hexo', // The current theme, you can find all the support themes under the themes folder; the theme name is the folder name, such as Example, Fukasawa, Gitbook, Heo, Hexo, LANDING, Matery, Medium, Next, Nobelium, Plog, Simpler, Simpler
-  THEME_SWITCH: process.env.NEXT_PUBLIC_THEME_SWITCH || true, // Whether to display the switch theme button
+  THEME_SWITCH: process.env.NEXT_PUBLIC_THEME_SWITCH || false, // Whether to display the switch theme button
   LANG: process.env.NEXT_PUBLIC_LANG || 'en-US', // e.g 'zh-CN','en-US'  see /lib/lang.js for more.
   SINCE: process.env.NEXT_SINCE || 2023, // e.g if leave this empty, current year will be used.
   APPEARANCE: process.env.NEXT_PUBLIC_APPEARANCE || 'light', // ['light', 'dark', 'auto'], // light Day mode, dark night mode, Auto automatic night mode according to time and theme
