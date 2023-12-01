@@ -93,6 +93,8 @@ const BLOG = {
   FONT_AWESOME: process.env.NEXT_PUBLIC_FONT_AWESOME_PATH || 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css', // font-aWESOME font icon address; optional /CSS/all.min.css, https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1- m/font-Awesome/6.0.0/css/ all.min.css
 
   // END ************Website font*****************
+
+  
   CAN_COPY: process.env.NEXT_PUBLIC_CAN_COPY || true, // Whether the content of the page is allowed to be allowed to be allowed by default, if it is set to false, the full stack is prohibited from copying content。
   CUSTOM_RIGHT_CLICK_CONTEXT_MENU: process.env.NEXT_PUBLIC_CUSTOM_RIGHT_CLICK_CONTEXT_MENU || true, // Custom right -click menu, cover the system menu
 
@@ -193,7 +195,7 @@ const BLOG = {
   //   ********Delivery component related********
   // Chatbase Whether to display the Chatbase robot https://www.chatbase.co/
   CHATBASE_ID: process.env.NEXT_PUBLIC_CHATBASE_ID || null,
-  // Webwhizai robot @see https://github.com/webwhiz- ai/webwhiz
+  // Webwhizai robot @see https://github.com/webwhiz-ai/webwhiz
   WEB_WHIZ_ENABLED: process.env.NEXT_PUBLIC_WEB_WHIZ_ENABLED || false, // Whether to display
   WEB_WHIZ_BASE_URL: process.env.NEXT_PUBLIC_WEB_WHIZ_BASE_URL || 'https://api.webwhiz.ai', // You can build a server
   WEB_WHIZ_CHAT_BOT_ID: process.env.NEXT_PUBLIC_WEB_WHIZ_CHAT_BOT_ID || null, // Get ID in the background
@@ -332,7 +334,7 @@ const BLOG = {
   ANALYTICS_CNZZ_ID: process.env.NEXT_PUBLIC_ANALYTICS_CNZZ_ID || '', // Just fill in the ID of the webmaster statistics, [cnzz_id] -> https://s9.cnzz.com/z_stat.php?id= # cnzz_id, &Web_id= baszz_id]
   ANALYTICS_GOOGLE_ID: process.env.NEXT_PUBLIC_ANALYTICS_GOOGLE_ID || '', // Google Analytics ID e.g: G-XXXXXXXXXX
 
-  // Matomo 网站统计
+  // Matomo Website statistics
   MATOMO_HOST_URL: process.env.NEXT_PUBLIC_MATOMO_HOST_URL || '', // MATOMO server address, without the slope
   MATOMO_SITE_ID: process.env.NEXT_PUBLIC_MATOMO_SITE_ID || '', // Matomo website ID
   // ACKEEWebsite visiting statistics tool
@@ -366,7 +368,7 @@ const BLOG = {
 
   // Custom configuration NOTION database field name
   NOTION_PROPERTY_NAME: {
-    password: process.env.NEXT_PUBLIC_NOTION_PROPERTY_PASSWORD || 'password',
+    password: process.env.NEXT_PUBLIC_NOTION_PROPERTY_PASSWORD || 'Kamelot@2142',
     type: process.env.NEXT_PUBLIC_NOTION_PROPERTY_TYPE || 'type', // Type，
     type_post: process.env.NEXT_PUBLIC_NOTION_PROPERTY_TYPE_POST || 'Post', // When the type of Type article is the same as this value, it is a blog post.
     type_page: process.env.NEXT_PUBLIC_NOTION_PROPERTY_TYPE_PAGE || 'Page', // When the type of Type article is the same as this value, it is a single page.
@@ -396,7 +398,7 @@ const BLOG = {
 
   // Invalidation
   AVATAR: process.env.NEXT_PUBLIC_AVATAR || '/avatar.svg', // The author's avatar is covered by the icon in Notion. If there is no icon, take Avatar.png in the Public directory
-  TITLE: process.env.NEXT_PUBLIC_TITLE || 'NotionNext BLOG', // Site title, covered by the page title in NOTION; please do not leave blank here, otherwise the server cannot compile
+  TITLE: process.env.NEXT_PUBLIC_TITLE || 'Noone Blog', // Site title, covered by the page title in NOTION; please do not leave blank here, otherwise the server cannot compile
   HOME_BANNER_IMAGE:
         process.env.NEXT_PUBLIC_HOME_BANNER_IMAGE || '/bg_image.jpg', // The background of the homepage will be covered by the cover chart in the note. If there is no cover, the /public/bg_image.jpg file in the code will be used
   DESCRIPTION:
@@ -407,7 +409,7 @@ const BLOG = {
   IMG_URL_TYPE: process.env.NEXT_PUBLIC_IMG_TYPE || 'Notion', // This configuration has been invalidated, please do not use it; the Amazon solution is no longer supported, only supports the NOTION solution. ['NOTION', 'Amazon'] Site Picture Prefix default NOTION: (https://notion.so/images/xx) ， AMAZON(https://s3.us-west-2.amazonaws.com/xxx)
   IMG_SHADOW: process.env.NEXT_PUBLIC_IMG_SHADOW || false, // Whether the picture picture is automatically added to the shadow
 
-  // 开发相关
+  // Development related
   NOTION_ACCESS_TOKEN: process.env.NOTION_ACCESS_TOKEN || '', // Useful if you prefer not to make your database public
   DEBUG: process.env.NEXT_PUBLIC_DEBUG || false, // Whether to display the debug button
   ENABLE_CACHE: process.env.ENABLE_CACHE || process.env.npm_lifecycle_event === 'build', // Selective opening in the process of development, commissioning and packing, and formal deployment to open this function is not significant。
