@@ -12,47 +12,52 @@ const BLOG = {
   APPEARANCE: process.env.NEXT_PUBLIC_APPEARANCE || 'light', // ['light', 'dark', 'auto'], // light Day mode, dark night mode, Auto automatic night mode according to time and theme
   APPEARANCE_DARK_TIME: process.env.NEXT_PUBLIC_APPEARANCE_DARK_TIME || [18, 6], // From the night mode to time, turn off the night mode automatically according to time
 
-  // 3.14.1版本后，欢迎语在此配置，英文逗号隔开 ,  即可支持多个欢迎语打字效果。
+  // After version 3.14.1, welcome to configuration here, and the English comma is separated to support multiple welcome typing effects。
   GREETING_WORDS: process.env.NEXT_PUBLIC_GREETING_WORDS || 'Hi, I am a programmer, hi, I am a worker, hi, I am a dry food man, welcome to my blog ',
 
-  CUSTOM_MENU: process.env.NEXT_PUBLIC_CUSTOM_MENU || false, // 支持Menu 类型，从3.12.0版本起，各主题将逐步支持灵活的二级菜单配置，替代了原来的Page类型，此配置是试验功能、默认关闭。
+  CUSTOM_MENU: process.env.NEXT_PUBLIC_CUSTOM_MENU || false, // Support the Menu type. From the 3.12.0 version, each theme will gradually support flexible secondary menu configuration to replace the original Page type. This configuration is the test function, the default shutdown is closed。
 
-  AUTHOR: process.env.NEXT_PUBLIC_AUTHOR || 'NotionNext', // 您的昵称 例如 tangly1024
-  BIO: process.env.NEXT_PUBLIC_BIO || '一个普通的干饭人🍚', // 作者简介
-  LINK: process.env.NEXT_PUBLIC_LINK || 'https://tangly1024.com', // 网站地址
-  KEYWORDS: process.env.NEXT_PUBLIC_KEYWORD || 'Notion, 博客', // 网站关键词 英文逗号隔开
+  AUTHOR: process.env.NEXT_PUBLIC_AUTHOR || 'NotionNext', // Your nickname, such as tangly1024
+  BIO: process.env.NEXT_PUBLIC_BIO || '一个普通的干饭人🍚', // About the Author
+  LINK: process.env.NEXT_PUBLIC_LINK || 'https://tangly1024.com', // Website address
+  KEYWORDS: process.env.NEXT_PUBLIC_KEYWORD || 'Notion, 博客', // Website keyword English comma is separated
 
   // 社交链接，不需要可留空白，例如 CONTACT_WEIBO:''
-  CONTACT_EMAIL: process.env.NEXT_PUBLIC_CONTACT_EMAIL || '', // 邮箱地址 例如mail@tangly1024.com
-  CONTACT_WEIBO: process.env.NEXT_PUBLIC_CONTACT_WEIBO || '', // 你的微博个人主页
-  CONTACT_TWITTER: process.env.NEXT_PUBLIC_CONTACT_TWITTER || '', // 你的twitter个人主页
-  CONTACT_GITHUB: process.env.NEXT_PUBLIC_CONTACT_GITHUB || '', // 你的github个人主页 例如 https://github.com/tangly1024
-  CONTACT_TELEGRAM: process.env.NEXT_PUBLIC_CONTACT_TELEGRAM || '', // 你的telegram 地址 例如 https://t.me/tangly_1024
-  CONTACT_LINKEDIN: process.env.NEXT_PUBLIC_CONTACT_LINKEDIN || '', // 你的linkedIn 首页
-  CONTACT_INSTAGRAM: process.env.NEXT_PUBLIC_CONTACT_INSTAGRAM || '', // 您的instagram地址
-  CONTACT_BILIBILI: process.env.NEXT_PUBLIC_CONTACT_BILIBILI || '', // B站主页
-  CONTACT_YOUTUBE: process.env.NEXT_PUBLIC_CONTACT_YOUTUBE || '', // Youtube主页
+  CONTACT_EMAIL: process.env.NEXT_PUBLIC_CONTACT_EMAIL || '', // Email address, such as mail@tangly1024.com
+  CONTACT_WEIBO: process.env.NEXT_PUBLIC_CONTACT_WEIBO || '', // Your Weibo personal homepage
+  CONTACT_TWITTER: process.env.NEXT_PUBLIC_CONTACT_TWITTER || '', // Your Twitter personal homepage
+  CONTACT_GITHUB: process.env.NEXT_PUBLIC_CONTACT_GITHUB || '', // Your github personal homepage, such as https://github.com/tangly1024
+  CONTACT_TELEGRAM: process.env.NEXT_PUBLIC_CONTACT_TELEGRAM || '', // Your Telegram address, such as https://t.me/tangly_1024
+  CONTACT_LINKEDIN: process.env.NEXT_PUBLIC_CONTACT_LINKEDIN || '', // Your LinkedIn homepage
+  CONTACT_INSTAGRAM: process.env.NEXT_PUBLIC_CONTACT_INSTAGRAM || '', // Your Instagram address
+  CONTACT_BILIBILI: process.env.NEXT_PUBLIC_CONTACT_BILIBILI || '', // Station B homepage
 
-  NOTION_HOST: process.env.NEXT_PUBLIC_NOTION_HOST || 'https://www.notion.so', // Notion域名，您可以选择用自己的域名进行反向代理，如果不懂得什么是反向代理，请勿修改此项
+  CONTACT_YOUTUBE: process.env.NEXT_PUBLIC_CONTACT_YOUTUBE || '', // Youtube homepage
 
-  BLOG_FAVICON: process.env.NEXT_PUBLIC_FAVICON || '/favicon.ico', // blog favicon 配置, 默认使用 /public/favicon.ico，支持在线图片，如 https://img.imesong.com/favicon.png
 
-  RANDOM_IMAGE_URL: process.env.NEXT_PUBLIC_RANDOM_IMAGE_URL || '', // 随机图片API,如果未配置下面的关键字，主页封面，头像，文章封面图都会被替换为随机图片
-  RANDOM_IMAGE_REPLACE_TEXT: process.env.NEXT_PUBLIC_RANDOM_IMAGE_NOT_REPLACE_TEXT || 'images.unsplash.com', // 触发替换图片的 url 关键字(多个支持用英文逗号分开)，只有图片地址中包含此关键字才会替换为上方随机图片url
-  // eg: images.unsplash.com(notion图床的所有图片都会替换),如果你在 notion 里已经添加了一个随机图片 url，恰巧那个服务跑路或者挂掉，想一键切换所有配图可以将该 url 配置在这里
-  // 默认下会将你上传到 notion的主页封面图和头像也给替换，建议将主页封面图和头像放在其他图床，在 notion 里配置 link 即可。
+  NOTION_HOST: process.env.NEXT_PUBLIC_NOTION_HOST || 'https://www.notion.so', // NOTION domain name, you can choose to use your own domain name for reverse proxy. If you don’t know what the reverse proxy is, please do not modify this item
 
-  // START ************网站字体*****************
 
-  FONT_STYLE: process.env.NEXT_PUBLIC_FONT_STYLE || 'font-sans', // ['font-serif','font-sans'] 两种可选，分别是衬线和无衬线: 参考 https://www.jianshu.com/p/55e410bd2115
-  // 字体CSS 例如 https://npm.elemecdn.com/lxgw-wenkai-webfont@1.6.0/style.css
+  BLOG_FAVICON: process.env.NEXT_PUBLIC_FAVICON || '/favicon.ico', // blog favicon configuration, use /public/Favicon.ico default to support online pictures, such as https://img.imesong.com/favicon.png
+
+  RANDOM_IMAGE_URL: process.env.NEXT_PUBLIC_RANDOM_IMAGE_URL || '', // Random picture API, if the keywords below, the cover of the homepage, the avatar, the cover map of the article will be replaced by random picture
+
+  RANDOM_IMAGE_REPLACE_TEXT: process.env.NEXT_PUBLIC_RANDOM_IMAGE_NOT_REPLACE_TEXT || 'images.unsplash.com', // The URL keyword of the replacement picture is triggered (multiple supports are supported by English commas). Only this keyword contains this keyword in the picture address will replace it with random picture URL
+// Eg: Images.unsplash.com (All pictures in the notion graph will be replaced), if you have added a random picture URL in the note, it happens that the service runs or hangs up. Configure the url here
+// By default, you will upload you to the cover map and avatars of the Notion's homepage. It is recommended to put the homepage cover and avatar in other graph beds and configure link in the note.
+
+  
+  // START ************Website font*****************
+
+  FONT_STYLE: process.env.NEXT_PUBLIC_FONT_STYLE || 'font-sans', // ['font-serif','font-sans'] Two options, both sages and non -sterilization: refer to https://www.jianshu.com/p/55e410BD2115
+// Font CSS, such as https://npm.elemecdn.com/lxgw-wenkai-webfont@1.6.0/style.csss
   FONT_URL: [
     // 'https://npm.elemecdn.com/lxgw-wenkai-webfont@1.6.0/style.css',
     'https://fonts.googleapis.com/css?family=Bitter&display=swap',
     'https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300&display=swap',
     'https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300&display=swap'
   ],
-  // 无衬线字体 例如'"LXGW WenKai"'
+// No -screen fonts such as '"lxgwwenkai"'
   FONT_SANS: [
     // '"LXGW WenKai"',
     '"PingFang SC"',
@@ -72,7 +77,7 @@ const BLOG = {
     'sans-serif',
     '"Apple Color Emoji"'
   ],
-  // 衬线字体 例如'"LXGW WenKai"'
+  // Setting fonts such as '"lxgwwenkai"'
   FONT_SERIF: [
     // '"LXGW WenKai"',
     'Bitter',
@@ -85,46 +90,47 @@ const BLOG = {
     '"Segoe UI Symbol"',
     '"Apple Color Emoji"'
   ],
-  FONT_AWESOME: process.env.NEXT_PUBLIC_FONT_AWESOME_PATH || 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css', // font-awesome 字体图标地址; 可选 /css/all.min.css ， https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-M/font-awesome/6.0.0/css/all.min.css
+  FONT_AWESOME: process.env.NEXT_PUBLIC_FONT_AWESOME_PATH || 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css', // font-aWESOME font icon address; optional /CSS/all.min.css, https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1- m/font-Awesome/6.0.0/css/ all.min.css
 
-  // END ************网站字体*****************
-  CAN_COPY: process.env.NEXT_PUBLIC_CAN_COPY || true, // 是否允许复制页面内容 默认允许，如果设置为false、则全栈禁止复制内容。
-  CUSTOM_RIGHT_CLICK_CONTEXT_MENU: process.env.NEXT_PUBLIC_CUSTOM_RIGHT_CLICK_CONTEXT_MENU || true, // 自定义右键菜单，覆盖系统菜单
+  // END ************Website font*****************
+  CAN_COPY: process.env.NEXT_PUBLIC_CAN_COPY || true, // Whether the content of the page is allowed to be allowed to be allowed by default, if it is set to false, the full stack is prohibited from copying content。
+  CUSTOM_RIGHT_CLICK_CONTEXT_MENU: process.env.NEXT_PUBLIC_CUSTOM_RIGHT_CLICK_CONTEXT_MENU || true, // Custom right -click menu, cover the system menu
 
-  // 自定义外部脚本，外部样式
+  // Custom outer script, external style
+
   CUSTOM_EXTERNAL_JS: [''], // e.g. ['http://xx.com/script.js','http://xx.com/script.js']
   CUSTOM_EXTERNAL_CSS: [''], // e.g. ['http://xx.com/style.css','http://xx.com/style.css']
 
-  // 侧栏布局 是否反转(左变右,右变左) 已支持主题: hexo next medium fukasawa example
+  // Whether the sidebar layout is reversed (change from left, right, right to the left) has supported theme: hexo Next Medium Fukasawa Example
   LAYOUT_SIDEBAR_REVERSE: process.env.NEXT_PUBLIC_LAYOUT_SIDEBAR_REVERSE || false,
 
-  // 一个小插件展示你的facebook fan page~ @see https://tw.andys.pro/article/add-facebook-fanpage-notionnext
-  FACEBOOK_PAGE_TITLE: process.env.NEXT_PUBLIC_FACEBOOK_PAGE_TITLE || null, // 邊欄 Facebook Page widget 的標題欄，填''則無標題欄 e.g FACEBOOK 粉絲團'
-  FACEBOOK_PAGE: process.env.NEXT_PUBLIC_FACEBOOK_PAGE || null, // Facebook Page 的連結 e.g https://www.facebook.com/tw.andys.pro
-  FACEBOOK_PAGE_ID: process.env.NEXT_PUBLIC_FACEBOOK_PAGE_ID || '', // Facebook Page ID 來啟用 messenger 聊天功能
-  FACEBOOK_APP_ID: process.env.NEXT_PUBLIC_FACEBOOK_APP_ID || '', // Facebook App ID 來啟用 messenger 聊天功能 获取: https://developers.facebook.com/
+  // A small plug-in display your Facebook Fan Page ~ @See https://tw.andys.pro/article/add-faceBook-fanpage-notionnext
+  FACEBOOK_PAGE_TITLE: process.env.NEXT_PUBLIC_FACEBOOK_PAGE_TITLE || null, // The title bar of the Facebook Page Widget of the sidebar, fill in '' 'without the title bar E.G Facebook fan group'
+  FACEBOOK_PAGE: process.env.NEXT_PUBLIC_FACEBOOK_PAGE || null, // Facebook Page connection e.g https://www.facebook.com/tw.andys.pro
+  FACEBOOK_PAGE_ID: process.env.NEXT_PUBLIC_FACEBOOK_PAGE_ID || '', //Facebook Page ID to enable Messenger chat function
+  FACEBOOK_APP_ID: process.env.NEXT_PUBLIC_FACEBOOK_APP_ID || '', // Facebook App ID to enable messenger chat function to get: https://developers.Facebook.com/
 
-  BEI_AN: process.env.NEXT_PUBLIC_BEI_AN || '', // 备案号 闽ICP备XXXXXXX
+  BEI_AN: process.env.NEXT_PUBLIC_BEI_AN || '', // Record number of Fujian ICP for XXXXXXX
 
-  // START********代码相关********
-  // PrismJs 代码相关
+  // START********Code -related********
+  // PrismJs Code -related
   PRISM_JS_PATH: 'https://npm.elemecdn.com/prismjs@1.29.0/components/',
   PRISM_JS_AUTO_LOADER: 'https://npm.elemecdn.com/prismjs@1.29.0/plugins/autoloader/prism-autoloader.min.js',
 
-  // 代码主题 @see https://github.com/PrismJS/prism-themes
-  PRISM_THEME_PREFIX_PATH: process.env.NEXT_PUBLIC_PRISM_THEME_PREFIX_PATH || 'https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-okaidia.css', // 代码块默认主题
-  PRISM_THEME_SWITCH: process.env.NEXT_PUBLIC_PRISM_THEME_SWITCH || true, // 是否开启浅色/深色模式代码主题切换； 开启后将显示以下两个主题
-  PRISM_THEME_LIGHT_PATH: process.env.NEXT_PUBLIC_PRISM_THEME_LIGHT_PATH || 'https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-solarizedlight.css', // 浅色模式主题
-  PRISM_THEME_DARK_PATH: process.env.NEXT_PUBLIC_PRISM_THEME_DARK_PATH || 'https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-okaidia.min.css', // 深色模式主题
+  // Code theme @See https://github.com/prismjs/prism- themes
+  PRISM_THEME_PREFIX_PATH: process.env.NEXT_PUBLIC_PRISM_THEME_PREFIX_PATH || 'https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-okaidia.css', // Code block default theme
+  PRISM_THEME_SWITCH: process.env.NEXT_PUBLIC_PRISM_THEME_SWITCH || true, // Whether to turn on the light/dark mode code theme switch; after opening, the following two themes will be displayed
+  PRISM_THEME_LIGHT_PATH: process.env.NEXT_PUBLIC_PRISM_THEME_LIGHT_PATH || 'https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-solarizedlight.css', // Light color mode theme
+  PRISM_THEME_DARK_PATH: process.env.NEXT_PUBLIC_PRISM_THEME_DARK_PATH || 'https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-okaidia.min.css', // Dark mode theme
 
-  CODE_MAC_BAR: process.env.NEXT_PUBLIC_CODE_MAC_BAR || true, // 代码左上角显示mac的红黄绿图标
-  CODE_LINE_NUMBERS: process.env.NEXT_PUBLIC_CODE_LINE_NUMBERS || false, // 是否显示行号
-  CODE_COLLAPSE: process.env.NEXT_PUBLIC_CODE_COLLAPSE || true, // 是否支持折叠代码框
-  CODE_COLLAPSE_EXPAND_DEFAULT: process.env.NEXT_PUBLIC_CODE_COLLAPSE_EXPAND_DEFAULT || true, // 折叠代码默认是展开状态
+  CODE_MAC_BAR: process.env.NEXT_PUBLIC_CODE_MAC_BAR || true, // The red, yellow and green icon of MAC display in the upper left corner of the code
+  CODE_LINE_NUMBERS: process.env.NEXT_PUBLIC_CODE_LINE_NUMBERS || false, // Whether to display line number
+  CODE_COLLAPSE: process.env.NEXT_PUBLIC_CODE_COLLAPSE || true, // Whether to support folding code box
+  CODE_COLLAPSE_EXPAND_DEFAULT: process.env.NEXT_PUBLIC_CODE_COLLAPSE_EXPAND_DEFAULT || true, // Folding code default is the unfolding state
 
-  // END********代码相关********
+  // END********Code -related********
 
-  // Mermaid 图表CDN
+  // Mermaid Chart CDN
   MERMAID_CDN: process.env.NEXT_PUBLIC_MERMAID_CDN || 'https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.2.4/mermaid.min.js', // CDN
   // QRCodeCDN
   QR_CODE_CDN: process.env.NEXT_PUBLIC_QR_CODE_CDN || 'https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js',
@@ -133,38 +139,39 @@ const BLOG = {
   BACKGROUND_DARK: '#000000', // use hex value, don't forget '#'
   SUB_PATH: '', // leave this empty unless you want to deploy in a folder
 
-  POST_SHARE_BAR_ENABLE: process.env.NEXT_PUBLIC_POST_SHARE_BAR || 'true', // 文章分享功能 ，将在底部显示一个分享条
-  POSTS_SHARE_SERVICES: process.env.NEXT_PUBLIC_POST_SHARE_SERVICES || 'link,wechat,qq,weibo,email,facebook,twitter,telegram,messenger,line,reddit,whatsapp,linkedin', // 分享的服務，按顺序显示,逗号隔开
-  // 所有支持的分享服务：link(复制链接),wechat(微信),qq,weibo(微博),email(邮件),facebook,twitter,telegram,messenger,line,reddit,whatsapp,linkedin,vkshare,okshare,tumblr,livejournal,mailru,viber,workplace,pocket,instapaper,hatena
+  POST_SHARE_BAR_ENABLE: process.env.NEXT_PUBLIC_POST_SHARE_BAR || 'true', // Article sharing function will display a sharing strip at the bottom
+  POSTS_SHARE_SERVICES: process.env.NEXT_PUBLIC_POST_SHARE_SERVICES || 'link,wechat,qq,weibo,email,facebook,twitter,telegram,messenger,line,reddit,whatsapp,linkedin', // Share service, display in order, comma is separated
+  // 所有支持的分享服务：link(复制链接),wechat(微信),qq,weibo(微博),email(邮件),facebook,twitter,telegram,messenger,line,reddit,whatsapp,linkedin,vkshare,okshare, Tumblr, LiveJournal, Mailru, Viber, Workplace, Pocket, Instapaper, Hatena
 
   POST_URL_PREFIX: process.env.NEXT_PUBLIC_POST_URL_PREFIX || 'article',
-  // POST类型文章的默认路径前缀，例如默认POST类型的路径是  /article/[slug]
-  // 如果此项配置为 '' 空， 则文章将没有前缀路径，使用场景： 希望文章前缀路径为 /post 的情况 支持多级
-  // 支援類似 WP 可自訂文章連結格式的功能：https://wordpress.org/documentation/article/customize-permalinks/，目前只先實作 %year%/%month%/%day%
-  // 例：如想連結改成前綴 article + 時間戳記，可變更為： 'article/%year%/%month%/%day%'
+  // POST The default path prefix of the type article, for example, the path of the default POST type is  /article/[slug]
+  // If this item is configured as '' empty, the article will have no prefix path. Use scene: I hope that the article prefix path is /Post, support multi -level
+  // Support the function similar to WP can customize articles connecting format: https://wordpress.org/documentation/article/customize- permalinks/.
+  // Example: If you want to connect and change to the prefix Article + timestamp, the variable can be changed to: 'article/%year%/%month%day%'
 
-  POST_LIST_STYLE: process.env.NEXT_PUBLIC_POST_LIST_STYLE || 'page', // ['page','scroll] 文章列表样式:页码分页、单页滚动加载
-  POST_LIST_PREVIEW: process.env.NEXT_PUBLIC_POST_PREVIEW || 'false', //  是否在列表加载文章预览
-  POST_PREVIEW_LINES: 12, // 预览博客行数
-  POST_RECOMMEND_COUNT: 6, // 推荐文章数量
+  POST_LIST_STYLE: process.env.NEXT_PUBLIC_POST_LIST_STYLE || 'page', // ['page','scroll] Article list style: page number paging, single page rolling loading
+  POST_LIST_PREVIEW: process.env.NEXT_PUBLIC_POST_PREVIEW || 'false', //  Whether to load the article preview in the list
+  POST_PREVIEW_LINES: 12, // Preview the number of blogs
+  POST_RECOMMEND_COUNT: 6, // Recommended articles
   POSTS_PER_PAGE: 12, // post counts per page
-  POSTS_SORT_BY: process.env.NEXT_PUBLIC_POST_SORT_BY || 'notion', // 排序方式 'date'按时间,'notion'由notion控制
+  POSTS_SORT_BY: process.env.NEXT_PUBLIC_POST_SORT_BY || 'notion', // Sorting method 'date' press time, 'notion' controlled by notion
 
-  ALGOLIA_APP_ID: process.env.NEXT_PUBLIC_ALGOLIA_APP_ID || null, // 在这里查看 https://dashboard.algolia.com/account/api-keys/
-  ALGOLIA_ADMIN_APP_KEY: process.env.ALGOLIA_ADMIN_APP_KEY || null, // 管理后台的KEY，不要暴露在代码中，在这里查看 https://dashboard.algolia.com/account/api-keys/
-  ALGOLIA_SEARCH_ONLY_APP_KEY: process.env.NEXT_PUBLIC_ALGOLIA_SEARCH_ONLY_APP_KEY || null, // 客户端搜索用的KEY
-  ALGOLIA_INDEX: process.env.NEXT_PUBLIC_ALGOLIA_INDEX || null, // 在Algolia中创建一个index用作数据库
-  //   ALGOLIA_RECREATE_DATA: process.env.ALGOLIA_RECREATE_DATA || process.env.npm_lifecycle_event === 'build', // 为true时重新构建索引数据; 默认在build时会构建
+  ALGOLIA_APP_ID: process.env.NEXT_PUBLIC_ALGOLIA_APP_ID || null, // Check here https://dashboard.algolia.com/account/api-keys/
+  ALGOLIA_ADMIN_APP_KEY: process.env.ALGOLIA_ADMIN_APP_KEY || null, // Key in the background, don't be exposed to the code, check here https://dashboard.algolia.com/account/api- keys/
+  ALGOLIA_SEARCH_ONLY_APP_KEY: process.env.NEXT_PUBLIC_ALGOLIA_SEARCH_ONLY_APP_KEY || null, // Client search key
+  ALGOLIA_INDEX: process.env.NEXT_PUBLIC_ALGOLIA_INDEX || null, // Create an index in Algolia for databases
+  //   ALGOLIA_RECREATE_DATA: process.env.ALGOLIA_RECREATE_DATA || process.env.npm_lifecycle_event === 'build', // Construct indexing data for True; build
 
-  PREVIEW_CATEGORY_COUNT: 16, // 首页最多展示的分类数量，0为不限制
-  PREVIEW_TAG_COUNT: 16, // 首页最多展示的标签数量，0为不限制
 
-  POST_DISABLE_GALLERY_CLICK: process.env.NEXT_PUBLIC_POST_DISABLE_GALLERY_CLICK || false, // 画册视图禁止点击，方便在友链页面的画册插入链接
+  PREVIEW_CATEGORY_COUNT: 16, // The maximum number of classifications displayed on the homepage, 0 is not limited
+  PREVIEW_TAG_COUNT: 16, // The number of labels displayed at the most homepage, 0 is not limited
 
-  //   ********动态特效相关********
-  // 鼠标点击烟花特效
-  FIREWORKS: process.env.NEXT_PUBLIC_FIREWORKS || false, // 开关
-  // 烟花色彩，感谢 https://github.com/Vixcity 提交的色彩
+  POST_DISABLE_GALLERY_CLICK: process.env.NEXT_PUBLIC_POST_DISABLE_GALLERY_CLICK || false, // The album view is prohibited from clicking, which is convenient for the album on the friend chain page to insert the link
+
+  //   ********Dynamic special effects related********
+  // Mouse click firework special effect
+  FIREWORKS: process.env.NEXT_PUBLIC_FIREWORKS || false, // switch
+// Fireworks color, thank you https://github.com/vixCity submitted color
   FIREWORKS_COLOR: [
     '255, 20, 97',
     '24, 255, 146',
@@ -172,102 +179,103 @@ const BLOG = {
     '251, 243, 140'
   ],
 
-  // 樱花飘落特效
-  SAKURA: process.env.NEXT_PUBLIC_SAKURA || false, // 开关
-  // 漂浮线段特效
-  NEST: process.env.NEXT_PUBLIC_NEST || false, // 开关
-  // 动态彩带特效
-  FLUTTERINGRIBBON: process.env.NEXT_PUBLIC_FLUTTERINGRIBBON || false, // 开关
-  // 静态彩带特效
-  RIBBON: process.env.NEXT_PUBLIC_RIBBON || false, // 开关
-  // 星空雨特效 黑夜模式才会生效
-  STARRY_SKY: process.env.NEXT_PUBLIC_STARRY_SKY || false, // 开关
+  // Sakura fall special effect
+  SAKURA: process.env.NEXT_PUBLIC_SAKURA || false, // switch
+  // Floating line special effect
+  NEST: process.env.NEXT_PUBLIC_NEST || false, // switch
+  // Dynamic ribbon special effect
+  FLUTTERINGRIBBON: process.env.NEXT_PUBLIC_FLUTTERINGRIBBON || false, // switch
+  // Static ribbon special effect
+  RIBBON: process.env.NEXT_PUBLIC_RIBBON || false, // switch
+ // Starry rain special effects night mode will take effect
+  STARRY_SKY: process.env.NEXT_PUBLIC_STARRY_SKY || false, // switch
 
-  //   ********挂件组件相关********
-  // Chatbase 是否显示chatbase机器人 https://www.chatbase.co/
+  //   ********Delivery component related********
+  // Chatbase Whether to display the Chatbase robot https://www.chatbase.co/
   CHATBASE_ID: process.env.NEXT_PUBLIC_CHATBASE_ID || null,
-  // WebwhizAI 机器人 @see https://github.com/webwhiz-ai/webwhiz
-  WEB_WHIZ_ENABLED: process.env.NEXT_PUBLIC_WEB_WHIZ_ENABLED || false, // 是否显示
-  WEB_WHIZ_BASE_URL: process.env.NEXT_PUBLIC_WEB_WHIZ_BASE_URL || 'https://api.webwhiz.ai', // 可以自建服务器
-  WEB_WHIZ_CHAT_BOT_ID: process.env.NEXT_PUBLIC_WEB_WHIZ_CHAT_BOT_ID || null, // 在后台获取ID
+  // Webwhizai robot @see https://github.com/webwhiz- ai/webwhiz
+  WEB_WHIZ_ENABLED: process.env.NEXT_PUBLIC_WEB_WHIZ_ENABLED || false, // Whether to display
+  WEB_WHIZ_BASE_URL: process.env.NEXT_PUBLIC_WEB_WHIZ_BASE_URL || 'https://api.webwhiz.ai', // You can build a server
+  WEB_WHIZ_CHAT_BOT_ID: process.env.NEXT_PUBLIC_WEB_WHIZ_CHAT_BOT_ID || null, // Get ID in the background
 
-  // 悬浮挂件
-  WIDGET_PET: process.env.NEXT_PUBLIC_WIDGET_PET || true, // 是否显示宠物挂件
+  // Suspended pendant
+  WIDGET_PET: process.env.NEXT_PUBLIC_WIDGET_PET || true, // Whether to show pet pendant
   WIDGET_PET_LINK:
         process.env.NEXT_PUBLIC_WIDGET_PET_LINK ||
-        'https://cdn.jsdelivr.net/npm/live2d-widget-model-wanko@1.0.5/assets/wanko.model.json', // 挂件模型地址 @see https://github.com/xiazeyu/live2d-widget-models
-  WIDGET_PET_SWITCH_THEME: process.env.NEXT_PUBLIC_WIDGET_PET_SWITCH_THEME || true, // 点击宠物挂件切换博客主题
+        'https://cdn.jsdelivr.net/npm/live2d-widget-model-wanko@1.0.5/assets/wanko.model.json', // Pendant model address @see https://github.com/xiazeyu/live2d-widget-models
+  WIDGET_PET_SWITCH_THEME: process.env.NEXT_PUBLIC_WIDGET_PET_SWITCH_THEME || true, // Click on pet pendant to switch blog theme
 
-  // 音乐播放插件
-  MUSIC_PLAYER: process.env.NEXT_PUBLIC_MUSIC_PLAYER || false, // 是否使用音乐播放插件
-  MUSIC_PLAYER_VISIBLE: process.env.NEXT_PUBLIC_MUSIC_PLAYER_VISIBLE || true, // 是否在左下角显示播放和切换，如果使用播放器，打开自动播放再隐藏，就会以类似背景音乐的方式播放，无法取消和暂停
+  // Music playback plug -in
+  MUSIC_PLAYER: process.env.NEXT_PUBLIC_MUSIC_PLAYER || false, // Whether to play plug -in with music
+  MUSIC_PLAYER_VISIBLE: process.env.NEXT_PUBLIC_MUSIC_PLAYER_VISIBLE || true, // Whether the playback and switching in the lower left corner, if you use the player, open the automatic playback before hiding, it will be played in a similar background music.
   MUSIC_PLAYER_AUTO_PLAY:
-        process.env.NEXT_PUBLIC_MUSIC_PLAYER_AUTO_PLAY || true, // 是否自动播放，不过自动播放时常不生效（移动设备不支持自动播放）
-  MUSIC_PLAYER_LRC_TYPE: process.env.NEXT_PUBLIC_MUSIC_PLAYER_LRC_TYPE || '0', // 歌词显示类型，可选值： 3 | 1 | 0（0：禁用 lrc 歌词，1：lrc 格式的字符串，3：lrc 文件 url）（前提是有配置歌词路径，对 meting 无效）
+        process.env.NEXT_PUBLIC_MUSIC_PLAYER_AUTO_PLAY || true, // Whether to play automatically, but automatic playback often does not take effect (mobile devices do not support automatic playback)
+  MUSIC_PLAYER_LRC_TYPE: process.env.NEXT_PUBLIC_MUSIC_PLAYER_LRC_TYPE || '0', // Lyrics display type, optional value: 3 | 1 | 0 (0: disable LRC lyrics, 1: LRC format string, 3: LRC file URL) (premise that there is a configuration lyrics path, which is invalid for meting)
   MUSIC_PLAYER_CDN_URL:
         process.env.NEXT_PUBLIC_MUSIC_PLAYER_CDN_URL ||
         'https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-M/aplayer/1.10.1/APlayer.min.js',
-  MUSIC_PLAYER_ORDER: process.env.NEXT_PUBLIC_MUSIC_PLAYER_ORDER || 'list', // 默认播放方式，顺序 list，随机 random
+  MUSIC_PLAYER_ORDER: process.env.NEXT_PUBLIC_MUSIC_PLAYER_ORDER || 'list', // Default playback method, order list, random Random
+
   MUSIC_PLAYER_AUDIO_LIST: [
-    // 示例音乐列表。除了以下配置外，还可配置歌词，具体配置项看此文档 https://aplayer.js.org/#/zh-Hans/
+    // Example music list. In addition to the following configuration, lyrics can also be configured. https://aplayer.js.org/#/zh-Hans/
     {
-      name: '风を共に舞う気持ち',
+      name: 'Feelings to dance together',
       artist: 'Falcom Sound Team jdk',
       url: 'https://music.163.com/song/media/outer/url?id=731419.mp3',
       cover:
             'https://p2.music.126.net/kn6ugISTonvqJh3LHLaPtQ==/599233837187278.jpg'
     },
     {
-      name: '王都グランセル',
+      name: 'Royal City Grannel',
       artist: 'Falcom Sound Team jdk',
       url: 'https://music.163.com/song/media/outer/url?id=731355.mp3',
       cover:
             'https://p1.music.126.net/kn6ugISTonvqJh3LHLaPtQ==/599233837187278.jpg'
     }
   ],
-  MUSIC_PLAYER_METING: process.env.NEXT_PUBLIC_MUSIC_PLAYER_METING || false, // 是否要开启 MetingJS，从平台获取歌单。会覆盖自定义的 MUSIC_PLAYER_AUDIO_LIST，更多配置信息：https://github.com/metowolf/MetingJS
+  MUSIC_PLAYER_METING: process.env.NEXT_PUBLIC_MUSIC_PLAYER_METING || false, // Whether you want to open MetingJS and get a song list from the platform. Will cover the custom Music_player_audio_list, more configuration information: https://github.com/metowolf/metingjs
   MUSIC_PLAYER_METING_SERVER:
-        process.env.NEXT_PUBLIC_MUSIC_PLAYER_METING_SERVER || 'netease', // 音乐平台，[netease, tencent, kugou, xiami, baidu]
+        process.env.NEXT_PUBLIC_MUSIC_PLAYER_METING_SERVER || 'netease', // Music platform，[netease, tencent, kugou, xiami, baidu]
   MUSIC_PLAYER_METING_ID:
-        process.env.NEXT_PUBLIC_MUSIC_PLAYER_METING_ID || '60198', // 对应歌单的 id
+        process.env.NEXT_PUBLIC_MUSIC_PLAYER_METING_ID || '60198', // Corresponding song list id
   MUSIC_PLAYER_METING_LRC_TYPE:
-        process.env.NEXT_PUBLIC_MUSIC_PLAYER_METING_LRC_TYPE || '1', // 可选值： 3 | 1 | 0（0：禁用 lrc 歌词，1：lrc 格式的字符串，3：lrc 文件 url）
+        process.env.NEXT_PUBLIC_MUSIC_PLAYER_METING_LRC_TYPE || '1', // Optional value: 3 | 1 | 0 (0: disable LRC lyrics, 1: LRC format string, 3: LRC file URL)
 
-  //   ********挂件组件相关********
-  // ----> 评论互动 可同时开启多个支持 WALINE VALINE GISCUS CUSDIS UTTERRANCES GITALK
+  //   ********Delivery component related********
+  // ----> Comment interaction can also open multiple support for Waline Valine Giscus Cusdis Utterrances Gitalk
 
-  // artalk 评论插件
-  COMMENT_ARTALK_SERVER: process.env.NEXT_PUBLIC_COMMENT_ARTALK_SERVER || '', // ArtalkServert后端地址 https://artalk.js.org/guide/deploy.html
+  // artalk Comments plug -in
+  COMMENT_ARTALK_SERVER: process.env.NEXT_PUBLIC_COMMENT_ARTALK_SERVER || '', // ArtalkServert Back -end address https://artalk.js.org/guide/deploy.html
   COMMENT_ARTALK_JS: process.env.NEXT_PUBLIC_COMMENT_ARTALK_JS || 'https://cdnjs.cloudflare.com/ajax/libs/artalk/2.5.5/Artalk.js', // ArtalkServert js cdn
   COMMENT_ARTALK_CSS: process.env.NEXT_PUBLIC_COMMENT_ARTALK_CSS || 'https://cdnjs.cloudflare.com/ajax/libs/artalk/2.5.5/Artalk.css', // ArtalkServert css cdn
 
   // twikoo
-  COMMENT_TWIKOO_ENV_ID: process.env.NEXT_PUBLIC_COMMENT_ENV_ID || '', // TWIKOO后端地址 腾讯云环境填envId；Vercel环境填域名，教程：https://tangly1024.com/article/notionnext-twikoo
-  COMMENT_TWIKOO_COUNT_ENABLE: process.env.NEXT_PUBLIC_COMMENT_TWIKOO_COUNT_ENABLE || false, // 博客列表是否显示评论数
+  COMMENT_TWIKOO_ENV_ID: process.env.NEXT_PUBLIC_COMMENT_ENV_ID || '', // TWIKOOBack-end address Tencent Cloud Environment Fill in ENVID; Vercel environment fill domain name, tutorial: https://tangly1024.com/article/notionnext-twikoo
+  COMMENT_TWIKOO_COUNT_ENABLE: process.env.NEXT_PUBLIC_COMMENT_TWIKOO_COUNT_ENABLE || false, // Whether the blog list shows the number of comments
   COMMENT_TWIKOO_CDN_URL: process.env.NEXT_PUBLIC_COMMENT_TWIKOO_CDN_URL || 'https://cdn.staticfile.org/twikoo/1.6.17/twikoo.min.js', // twikoo客户端cdn
 
   // utterance
   COMMENT_UTTERRANCES_REPO:
-        process.env.NEXT_PUBLIC_COMMENT_UTTERRANCES_REPO || '', // 你的代码仓库名， 例如我是 'tangly1024/NotionNext'； 更多文档参考 https://utteranc.es/
+        process.env.NEXT_PUBLIC_COMMENT_UTTERRANCES_REPO || '', // Your code warehouse name, for example, I am 'Tangly1024/Notionnext'; more documentation refers to https://utteranc.es/
 
   // giscus @see https://giscus.app/
-  COMMENT_GISCUS_REPO: process.env.NEXT_PUBLIC_COMMENT_GISCUS_REPO || '', // 你的Github仓库名 e.g 'tangly1024/NotionNext'
-  COMMENT_GISCUS_REPO_ID: process.env.NEXT_PUBLIC_COMMENT_GISCUS_REPO_ID || '', // 你的Github Repo ID e.g ( 設定完 giscus 即可看到 )
+  COMMENT_GISCUS_REPO: process.env.NEXT_PUBLIC_COMMENT_GISCUS_REPO || '', // Your Github warehouse name E.G 'Tangly1024/NOTIONNEXT'
+  COMMENT_GISCUS_REPO_ID: process.env.NEXT_PUBLIC_COMMENT_GISCUS_REPO_ID || '', // Your github repo ID e.g (you can see it after setting GISCUS)
   COMMENT_GISCUS_CATEGORY_ID:
-        process.env.NEXT_PUBLIC_COMMENT_GISCUS_CATEGORY_ID || '', // 你的Github Discussions 內的 Category ID ( 設定完 giscus 即可看到 )
+        process.env.NEXT_PUBLIC_COMMENT_GISCUS_CATEGORY_ID || '', // Category ID in your Github Discussions (you can see it after setting GISCUS)
   COMMENT_GISCUS_MAPPING:
-        process.env.NEXT_PUBLIC_COMMENT_GISCUS_MAPPING || 'pathname', // 你的Github Discussions 使用哪種方式來標定文章, 預設 'pathname'
+        process.env.NEXT_PUBLIC_COMMENT_GISCUS_MAPPING || 'pathname', // Which method of your github discussions is used to calibrate articles, preset "PathName '
   COMMENT_GISCUS_REACTIONS_ENABLED:
-        process.env.NEXT_PUBLIC_COMMENT_GISCUS_REACTIONS_ENABLED || '1', // 你的 Giscus 是否開啟文章表情符號 '1' 開啟 "0" 關閉 預設開啟
+        process.env.NEXT_PUBLIC_COMMENT_GISCUS_REACTIONS_ENABLED || '1', // Is your giscus open the article and emoticons '1' to open "0" to close the default opening
   COMMENT_GISCUS_EMIT_METADATA:
-        process.env.NEXT_PUBLIC_COMMENT_GISCUS_EMIT_METADATA || '0', // 你的 Giscus 是否提取 Metadata '1' 開啟 '0' 關閉 預設關閉
+        process.env.NEXT_PUBLIC_COMMENT_GISCUS_EMIT_METADATA || '0', // Whether your giscus extract MetAdata '1' 1 ‘0 'Close the default closure
   COMMENT_GISCUS_INPUT_POSITION:
-        process.env.NEXT_PUBLIC_COMMENT_GISCUS_INPUT_POSITION || 'bottom', // 你的 Giscus 發表留言位置 'bottom' 尾部 'top' 頂部, 預設 'bottom'
-  COMMENT_GISCUS_LANG: process.env.NEXT_PUBLIC_COMMENT_GISCUS_LANG || 'zh-CN', // 你的 Giscus 語言 e.g 'en', 'zh-TW', 'zh-CN', 預設 'en'
+        process.env.NEXT_PUBLIC_COMMENT_GISCUS_INPUT_POSITION || 'bottom', // Your giscus published a message location 'top' 'top' top 'top, preset' bottom '
+  COMMENT_GISCUS_LANG: process.env.NEXT_PUBLIC_COMMENT_GISCUS_LANG || 'zh-CN', // Your giscus language e.g 'en', 'zh-tw', 'zh-cn', preset 'en'
   COMMENT_GISCUS_LOADING:
-        process.env.NEXT_PUBLIC_COMMENT_GISCUS_LOADING || 'lazy', // 你的 Giscus 載入是否漸進式載入, 預設 'lazy'
+        process.env.NEXT_PUBLIC_COMMENT_GISCUS_LOADING || 'lazy', // Whether your giscus is loaded gradually and loaded, the preset "lazy '
   COMMENT_GISCUS_CROSSORIGIN:
-        process.env.NEXT_PUBLIC_COMMENT_GISCUS_CROSSORIGIN || 'anonymous', // 你的 Giscus 可以跨網域, 預設 'anonymous'
+        process.env.NEXT_PUBLIC_COMMENT_GISCUS_CROSSORIGIN || 'anonymous', // Your giscus can cross the network, preset 'anonymous'
 
   COMMENT_CUSDIS_APP_ID: process.env.NEXT_PUBLIC_COMMENT_CUSDIS_APP_ID || '', // data-app-id 36位 see https://cusdis.com/
   COMMENT_CUSDIS_HOST:
@@ -276,58 +284,58 @@ const BLOG = {
         process.env.NEXT_PUBLIC_COMMENT_CUSDIS_SCRIPT_SRC ||
         '/js/cusdis.es.js', // change this if you're using self-hosted version
 
-  // gitalk评论插件 更多参考 https://gitalk.github.io/
-  COMMENT_GITALK_REPO: process.env.NEXT_PUBLIC_COMMENT_GITALK_REPO || '', // 你的Github仓库名，例如 'NotionNext'
-  COMMENT_GITALK_OWNER: process.env.NEXT_PUBLIC_COMMENT_GITALK_OWNER || '', // 你的用户名 e.g tangly1024
-  COMMENT_GITALK_ADMIN: process.env.NEXT_PUBLIC_COMMENT_GITALK_ADMIN || '', // 管理员用户名、一般是自己 e.g 'tangly1024'
+// gitalk comments plug -in more refer to https://gitalk.github.io/
+  COMMENT_GITALK_REPO: process.env.NEXT_PUBLIC_COMMENT_GITALK_REPO || '', // Your Github warehouse name, such as 'NOTIONNEXT'
+  COMMENT_GITALK_OWNER: process.env.NEXT_PUBLIC_COMMENT_GITALK_OWNER || '', // Your username E.G Tangly1024
+  COMMENT_GITALK_ADMIN: process.env.NEXT_PUBLIC_COMMENT_GITALK_ADMIN || '', // Administrator username, usually E.G 'Tangly1024'
   COMMENT_GITALK_CLIENT_ID:
-        process.env.NEXT_PUBLIC_COMMENT_GITALK_CLIENT_ID || '', // e.g 20位ID ， 在gitalk后台获取
+        process.env.NEXT_PUBLIC_COMMENT_GITALK_CLIENT_ID || '', // E.G 20 -bit ID, get in the Gitalk background
   COMMENT_GITALK_CLIENT_SECRET:
-        process.env.NEXT_PUBLIC_COMMENT_GITALK_CLIENT_SECRET || '', // e.g 40位ID， 在gitalk后台获取
-  COMMENT_GITALK_DISTRACTION_FREE_MODE: false, // 类似facebook的无干扰模式
+        process.env.NEXT_PUBLIC_COMMENT_GITALK_CLIENT_SECRET || '', // E.G 40 -digit ID, get in the gitalk background
+  COMMENT_GITALK_DISTRACTION_FREE_MODE: false, // Similar to Facebook's interference modeless mode
   COMMENT_GITALK_JS_CDN_URL: process.env.NEXT_PUBLIC_COMMENT_GITALK_JS_CDN_URL || 'https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', // gitalk客户端 js cdn
   COMMENT_GITALK_CSS_CDN_URL: process.env.NEXT_PUBLIC_COMMENT_GITALK_CSS_CDN_URL || 'https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css', // gitalk客户端 css cdn
 
-  COMMENT_GITTER_ROOM: process.env.NEXT_PUBLIC_COMMENT_GITTER_ROOM || '', // gitter聊天室 see https://gitter.im/ 不需要则留空
+  COMMENT_GITTER_ROOM: process.env.NEXT_PUBLIC_COMMENT_GITTER_ROOM || '', // Gitter chat room see https://gitter.im/ No need to leave empty
   COMMENT_DAO_VOICE_ID: process.env.NEXT_PUBLIC_COMMENT_DAO_VOICE_ID || '', // DaoVoice http://dashboard.daovoice.io/get-started
   COMMENT_TIDIO_ID: process.env.NEXT_PUBLIC_COMMENT_TIDIO_ID || '', // [tidio_id] -> //code.tidio.co/[tidio_id].js
 
   COMMENT_VALINE_CDN: process.env.NEXT_PUBLIC_VALINE_CDN || 'https://unpkg.com/valine@1.5.1/dist/Valine.min.js',
   COMMENT_VALINE_APP_ID: process.env.NEXT_PUBLIC_VALINE_ID || '', // Valine @see https://valine.js.org/quickstart.html 或 https://github.com/stonehank/react-valine#%E8%8E%B7%E5%8F%96app-id-%E5%92%8C-app-key
   COMMENT_VALINE_APP_KEY: process.env.NEXT_PUBLIC_VALINE_KEY || '',
-  COMMENT_VALINE_SERVER_URLS: process.env.NEXT_PUBLIC_VALINE_SERVER_URLS || '', // 该配置适用于国内自定义域名用户, 海外版本会自动检测(无需手动填写) @see https://valine.js.org/configuration.html#serverURLs
+  COMMENT_VALINE_SERVER_URLS: process.env.NEXT_PUBLIC_VALINE_SERVER_URLS || '', //This configuration is suitable for domestic custom domain name users, and the overseas version will automatically detect (no need to fill in manually) @see https://valine.js.org/configuration.html#serverURLs
   COMMENT_VALINE_PLACEHOLDER:
-        process.env.NEXT_PUBLIC_VALINE_PLACEHOLDER || '抢个沙发吧~', // 可以搭配后台管理评论 https://github.com/DesertsP/Valine-Admin  便于查看评论，以及邮件通知，垃圾评论过滤等功能
+        process.env.NEXT_PUBLIC_VALINE_PLACEHOLDER || '抢个沙发吧~', // You can match background management comments https://github.com/desertsp/valine-dmin for easy viewing comments, email notifications, spam review filtering and other functions
 
-  COMMENT_WALINE_SERVER_URL: process.env.NEXT_PUBLIC_WALINE_SERVER_URL || '', // 请配置完整的Waline评论地址 例如 hhttps://preview-waline.tangly1024.com @see https://waline.js.org/guide/get-started.html
-  COMMENT_WALINE_RECENT: process.env.NEXT_PUBLIC_WALINE_RECENT || false, // 最新评论
+  COMMENT_WALINE_SERVER_URL: process.env.NEXT_PUBLIC_WALINE_SERVER_URL || '', // Please configure the complete Waline comment address, such as hhttps://preview-waline.tangly1024.com @See https://waline.js.org/guide/get-started.html
+  COMMENT_WALINE_RECENT: process.env.NEXT_PUBLIC_WALINE_RECENT || false, // latest comment
 
-  // 此评论系统基于WebMention，细节可参考https://webmention.io
-  // 它是一个基于IndieWeb理念的开放式评论系统，下方COMMENT_WEBMENTION包含的属性皆需配置：
-  // ENABLE: 是否开启
-  // AUTH: Webmention使用的IndieLogin，可使用Twitter或Github个人页面连结
-  // HOSTNAME: Webmention绑定之网域，通常即为本站网址
-  // TWITTER_USERNAME: 评论显示区域需要的资讯
-  // TOKEN: Webmention的API token
+// This comment system is based on webmentation. For details, please refer to https://webmentation.io
+// It is an open comment system based on the INDIEEWEB concept. Below comments_webmentation contains the attributes all need to be configured:
+// Enable: Whether to open
+// authelogin used by Autbmention, you can use Twitter or Github personal page link
+// Hostname: The web are bound to webmention, usually the website of this site
+// Twitter_username: Comment shows the information required by the area
+// Token: Webmention -like API TOKEN
   COMMENT_WEBMENTION_ENABLE: process.env.NEXT_PUBLIC_WEBMENTION_ENABLE || false,
   COMMENT_WEBMENTION_AUTH: process.env.NEXT_PUBLIC_WEBMENTION_AUTH || '',
   COMMENT_WEBMENTION_HOSTNAME: process.env.NEXT_PUBLIC_WEBMENTION_HOSTNAME || '',
   COMMENT_WEBMENTION_TWITTER_USERNAME: process.env.NEXT_PUBLIC_TWITTER_USERNAME || '',
   COMMENT_WEBMENTION_TOKEN: process.env.NEXT_PUBLIC_WEBMENTION_TOKEN || '',
 
-  // <---- 评论插件
+  // <---- Comments plug -in
 
-  // ----> 站点统计
-  ANALYTICS_VERCEL: process.env.NEXT_PUBLIC_ANALYTICS_VERCEL || false, // vercel自带的统计 https://vercel.com/docs/concepts/analytics/quickstart https://github.com/tangly1024/NotionNext/issues/897
-  ANALYTICS_BUSUANZI_ENABLE: process.env.NEXT_PUBLIC_ANALYTICS_BUSUANZI_ENABLE || true, // 展示网站阅读量、访问数 see http://busuanzi.ibruce.info/
-  ANALYTICS_BAIDU_ID: process.env.NEXT_PUBLIC_ANALYTICS_BAIDU_ID || '', // e.g 只需要填写百度统计的id，[baidu_id] -> https://hm.baidu.com/hm.js?[baidu_id]
-  ANALYTICS_CNZZ_ID: process.env.NEXT_PUBLIC_ANALYTICS_CNZZ_ID || '', // 只需要填写站长统计的id, [cnzz_id] -> https://s9.cnzz.com/z_stat.php?id=[cnzz_id]&web_id=[cnzz_id]
-  ANALYTICS_GOOGLE_ID: process.env.NEXT_PUBLIC_ANALYTICS_GOOGLE_ID || '', // 谷歌Analytics的id e.g: G-XXXXXXXXXX
+  // ----> Site statistics
+  ANALYTICS_VERCEL: process.env.NEXT_PUBLIC_ANALYTICS_VERCEL || false, // Vercel's own statistics https://vercel.com/docs/concepts/analytics/quickstart https://github.com/tangly1024/notionnext/897
+  ANALYTICS_BUSUANZI_ENABLE: process.env.NEXT_PUBLIC_ANALYTICS_BUSUANZI_ENABLE || true, // Display website reading, access number see http://busuanzi.ibruce.info/
+  ANALYTICS_BAIDU_ID: process.env.NEXT_PUBLIC_ANALYTICS_BAIDU_ID || '', // E.G only needs to fill in the ID of Baidu statistics, [baidu_id] -> https://hm.baidu.com/hm.js?
+  ANALYTICS_CNZZ_ID: process.env.NEXT_PUBLIC_ANALYTICS_CNZZ_ID || '', // Just fill in the ID of the webmaster statistics, [cnzz_id] -> https://s9.cnzz.com/z_stat.php?id= # cnzz_id, &Web_id= baszz_id]
+  ANALYTICS_GOOGLE_ID: process.env.NEXT_PUBLIC_ANALYTICS_GOOGLE_ID || '', // Google Analytics ID e.g: G-XXXXXXXXXX
 
   // Matomo 网站统计
-  MATOMO_HOST_URL: process.env.NEXT_PUBLIC_MATOMO_HOST_URL || '', // Matomo服务器地址，不带斜杠
-  MATOMO_SITE_ID: process.env.NEXT_PUBLIC_MATOMO_SITE_ID || '', // Matomo网站ID
-  // ACKEE网站访客统计工具
+  MATOMO_HOST_URL: process.env.NEXT_PUBLIC_MATOMO_HOST_URL || '', // MATOMO server address, without the slope
+  MATOMO_SITE_ID: process.env.NEXT_PUBLIC_MATOMO_SITE_ID || '', // Matomo website ID
+  // ACKEEWebsite visiting statistics tool
   ANALYTICS_ACKEE_TRACKER: process.env.NEXT_PUBLIC_ANALYTICS_ACKEE_TRACKER || '', // e.g 'https://ackee.tangly1024.com/tracker.js'
   ANALYTICS_ACKEE_DATA_SERVER: process.env.NEXT_PUBLIC_ANALYTICS_ACKEE_DATA_SERVER || '', // e.g https://ackee.tangly1024.com , don't end with a slash
   ANALYTICS_ACKEE_DOMAIN_ID: process.env.NEXT_PUBLIC_ANALYTICS_ACKEE_DOMAIN_ID || '', // e.g '82e51db6-dec2-423a-b7c9-b4ff7ebb3302'
@@ -338,41 +346,41 @@ const BLOG = {
   SEO_BAIDU_SITE_VERIFICATION:
         process.env.NEXT_PUBLIC_SEO_BAIDU_SITE_VERIFICATION || '', // Remove the value or replace it with your own google site verification code
 
-  // <---- 站点统计
+  // <---- Site statistics
 
-  // START---->营收相关
+  // START---->// Start -----> Revenue-related
 
-  // 谷歌广告
-  ADSENSE_GOOGLE_ID: process.env.NEXT_PUBLIC_ADSENSE_GOOGLE_ID || '', // 谷歌广告ID e.g ca-pub-xxxxxxxxxxxxxxxx
-  ADSENSE_GOOGLE_TEST: process.env.NEXT_PUBLIC_ADSENSE_GOOGLE_TEST || false, // 谷歌广告ID测试模式，这种模式获取假的测试广告，用于开发 https://www.tangly1024.com/article/local-dev-google-adsense
-  ADSENSE_GOOGLE_SLOT_IN_ARTICLE: process.env.NEXT_PUBLIC_ADSENSE_GOOGLE_SLOT_IN_ARTICLE || '3806269138', // Google AdScene>广告>按单元广告>新建文章内嵌广告 粘贴html代码中的data-ad-slot值
-  ADSENSE_GOOGLE_SLOT_FLOW: process.env.NEXT_PUBLIC_ADSENSE_GOOGLE_SLOT_FLOW || '1510444138', // Google AdScene>广告>按单元广告>新建信息流广告
-  ADSENSE_GOOGLE_SLOT_NATIVE: process.env.NEXT_PUBLIC_ADSENSE_GOOGLE_SLOT_NATIVE || '4980048999', // Google AdScene>广告>按单元广告>新建原生广告
-  ADSENSE_GOOGLE_SLOT_AUTO: process.env.NEXT_PUBLIC_ADSENSE_GOOGLE_SLOT_AUTO || '8807314373', // Google AdScene>广告>按单元广告>新建展示广告 （自动广告）
+  // Google Advertising
+  ADSENSE_GOOGLE_ID: process.env.NEXT_PUBLIC_ADSENSE_GOOGLE_ID || '', //Google Advertising ID E.G CA-PUB-XXXXXXXXXXXXXX
+  ADSENSE_GOOGLE_TEST: process.env.NEXT_PUBLIC_ADSENSE_GOOGLE_TEST || false, // Google Advertising ID test mode, this mode obtains fake test advertisements for the development of https://www.tangly1024.com/article/local-dev-google-adsense
+  ADSENSE_GOOGLE_SLOT_IN_ARTICLE: process.env.NEXT_PUBLIC_ADSENSE_GOOGLE_SLOT_IN_ARTICLE || '3806269138', // Google Adscene> Advertising> According to unit advertisements> New articles embedded advertisement paste the data-add-slot value in the HTML code
+  ADSENSE_GOOGLE_SLOT_FLOW: process.env.NEXT_PUBLIC_ADSENSE_GOOGLE_SLOT_FLOW || '1510444138', // Google Adscene> Advertising> According to unit advertisements> New information flow advertisements
+  ADSENSE_GOOGLE_SLOT_NATIVE: process.env.NEXT_PUBLIC_ADSENSE_GOOGLE_SLOT_NATIVE || '4980048999', // Google Adscene> Advertising> According to unit advertising> New native ads
+  ADSENSE_GOOGLE_SLOT_AUTO: process.env.NEXT_PUBLIC_ADSENSE_GOOGLE_SLOT_AUTO || '8807314373', // Google Adscene> Advertising> According to unit advertisements> New display advertisements (automatic advertising)
 
-  // 万维广告
-  AD_WWADS_ID: process.env.NEXT_PUBLIC_WWAD_ID || null, // https://wwads.cn/ 创建您的万维广告单元ID
-  AD_WWADS_BLOCK_DETECT: process.env.NEXT_PUBLIC_WWADS_AD_BLOCK_DETECT || false, // 是否开启WWADS广告屏蔽插件检测,开启后会在广告位上以文字提示 @see https://github.com/bytegravity/whitelist-wwads
+  // Wanwei Advertising
+  AD_WWADS_ID: process.env.NEXT_PUBLIC_WWAD_ID || null, // https://wwads.cn/ Create your Wanwei advertising unit ID
+  AD_WWADS_BLOCK_DETECT: process.env.NEXT_PUBLIC_WWADS_AD_BLOCK_DETECT || false, // Whether to turn on the wwads advertising shielding plug-in detection, after opening, it will be prompted in the advertising position @See https://github.com/bytegravity/whitelist-wwads
 
-  // END<----营收相关
+  // END<----Revenue -related
 
-  // 自定义配置notion数据库字段名
+  // Custom configuration NOTION database field name
   NOTION_PROPERTY_NAME: {
     password: process.env.NEXT_PUBLIC_NOTION_PROPERTY_PASSWORD || 'password',
-    type: process.env.NEXT_PUBLIC_NOTION_PROPERTY_TYPE || 'type', // 文章类型，
-    type_post: process.env.NEXT_PUBLIC_NOTION_PROPERTY_TYPE_POST || 'Post', // 当type文章类型与此值相同时，为博文。
-    type_page: process.env.NEXT_PUBLIC_NOTION_PROPERTY_TYPE_PAGE || 'Page', // 当type文章类型与此值相同时，为单页。
+    type: process.env.NEXT_PUBLIC_NOTION_PROPERTY_TYPE || 'type', // Type，
+    type_post: process.env.NEXT_PUBLIC_NOTION_PROPERTY_TYPE_POST || 'Post', // When the type of Type article is the same as this value, it is a blog post.
+    type_page: process.env.NEXT_PUBLIC_NOTION_PROPERTY_TYPE_PAGE || 'Page', // When the type of Type article is the same as this value, it is a single page.
     type_notice:
-          process.env.NEXT_PUBLIC_NOTION_PROPERTY_TYPE_NOTICE || 'Notice', // 当type文章类型与此值相同时，为公告。
-    type_menu: process.env.NEXT_PUBLIC_NOTION_PROPERTY_TYPE_MENU || 'Menu', // 当type文章类型与此值相同时，为菜单。
+          process.env.NEXT_PUBLIC_NOTION_PROPERTY_TYPE_NOTICE || 'Notice', // When the type of Type article is the same as this value, it is an announcement
+    type_menu: process.env.NEXT_PUBLIC_NOTION_PROPERTY_TYPE_MENU || 'Menu', // When the type of Type article is the same as this value, it is the menu.
     type_sub_menu:
-          process.env.NEXT_PUBLIC_NOTION_PROPERTY_TYPE_SUB_MENU || 'SubMenu', // 当type文章类型与此值相同时，为子菜单。
-    title: process.env.NEXT_PUBLIC_NOTION_PROPERTY_TITLE || 'title', // 文章标题
+          process.env.NEXT_PUBLIC_NOTION_PROPERTY_TYPE_SUB_MENU || 'SubMenu', // When the type of Type article is the same as this value, it is a sub -menu.
+    title: process.env.NEXT_PUBLIC_NOTION_PROPERTY_TITLE || 'title', // Article title
     status: process.env.NEXT_PUBLIC_NOTION_PROPERTY_STATUS || 'status',
     status_publish:
-          process.env.NEXT_PUBLIC_NOTION_PROPERTY_STATUS_PUBLISH || 'Published', // 当status状态值与此相同时为发布，可以为中文
+          process.env.NEXT_PUBLIC_NOTION_PROPERTY_STATUS_PUBLISH || 'Published', // When the status value of the Status is the same as this, it can be Chinese
     status_invisible:
-          process.env.NEXT_PUBLIC_NOTION_PROPERTY_STATUS_INVISIBLE || 'Invisible', // 当status状态值与此相同时为隐藏发布，可以为中文 ， 除此之外其他页面状态不会显示在博客上
+          process.env.NEXT_PUBLIC_NOTION_PROPERTY_STATUS_INVISIBLE || 'Invisible', // When the status value of the Status is hidden at the same time, it can be Chinese. In addition, other page status will not be displayed on the blog
     summary: process.env.NEXT_PUBLIC_NOTION_PROPERTY_SUMMARY || 'summary',
     slug: process.env.NEXT_PUBLIC_NOTION_PROPERTY_SLUG || 'slug',
     category: process.env.NEXT_PUBLIC_NOTION_PROPERTY_CATEGORY || 'category',
@@ -381,30 +389,31 @@ const BLOG = {
     icon: process.env.NEXT_PUBLIC_NOTION_PROPERTY_ICON || 'icon'
   },
 
-  // RSS订阅
-  ENABLE_RSS: process.env.NEXT_PUBLIC_ENABLE_RSS || true, // 是否开启RSS订阅功能
-  MAILCHIMP_LIST_ID: process.env.MAILCHIMP_LIST_ID || null, // 开启mailichimp邮件订阅 客户列表ID ，具体使用方法参阅文档
-  MAILCHIMP_API_KEY: process.env.MAILCHIMP_API_KEY || null, // 开启mailichimp邮件订阅 APIkey
+  // RSS subscription
+  ENABLE_RSS: process.env.NEXT_PUBLIC_ENABLE_RSS || true, // Whether to turn on the RSS subscription function
+  MAILCHIMP_LIST_ID: process.env.MAILCHIMP_LIST_ID || null, // Open the Mailichimp mail to subscribe to the customer list ID, see the document for the specific usage method
+  MAILCHIMP_API_KEY: process.env.MAILCHIMP_API_KEY || null, // Open Mailichimp mail to subscribe to Apikey
 
-  // 作废配置
-  AVATAR: process.env.NEXT_PUBLIC_AVATAR || '/avatar.svg', // 作者头像，被notion中的ICON覆盖。若无ICON则取public目录下的avatar.png
-  TITLE: process.env.NEXT_PUBLIC_TITLE || 'NotionNext BLOG', // 站点标题 ，被notion中的页面标题覆盖；此处请勿留空白，否则服务器无法编译
+  // Invalidation
+  AVATAR: process.env.NEXT_PUBLIC_AVATAR || '/avatar.svg', // The author's avatar is covered by the icon in Notion. If there is no icon, take Avatar.png in the Public directory
+  TITLE: process.env.NEXT_PUBLIC_TITLE || 'NotionNext BLOG', // Site title, covered by the page title in NOTION; please do not leave blank here, otherwise the server cannot compile
   HOME_BANNER_IMAGE:
-        process.env.NEXT_PUBLIC_HOME_BANNER_IMAGE || '/bg_image.jpg', // 首页背景大图, 会被notion中的封面图覆盖，若无封面图则会使用代码中的 /public/bg_image.jpg 文件
+        process.env.NEXT_PUBLIC_HOME_BANNER_IMAGE || '/bg_image.jpg', // The background of the homepage will be covered by the cover chart in the note. If there is no cover, the /public/bg_image.jpg file in the code will be used
   DESCRIPTION:
-        process.env.NEXT_PUBLIC_DESCRIPTION || '这是一个由NotionNext生成的站点', // 站点描述，被notion中的页面描述覆盖
+        process.env.NEXT_PUBLIC_DESCRIPTION || 'This is a site generated by NOTIONNEXT', // Site description, covered by page description in the note
 
-  // 网站图片
-  IMG_LAZY_LOAD_PLACEHOLDER: process.env.NEXT_PUBLIC_IMG_LAZY_LOAD_PLACEHOLDER || 'data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==', // 懒加载占位图片地址，支持base64或url
-  IMG_URL_TYPE: process.env.NEXT_PUBLIC_IMG_TYPE || 'Notion', // 此配置已失效，请勿使用；AMAZON方案不再支持，仅支持Notion方案。 ['Notion','AMAZON'] 站点图片前缀 默认 Notion:(https://notion.so/images/xx) ， AMAZON(https://s3.us-west-2.amazonaws.com/xxx)
-  IMG_SHADOW: process.env.NEXT_PUBLIC_IMG_SHADOW || false, // 文章图片是否自动添加阴影
+  // Website picture
+  IMG_LAZY_LOAD_PLACEHOLDER: process.env.NEXT_PUBLIC_IMG_LAZY_LOAD_PLACEHOLDER || 'data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==', // Lazy loading the picture address, support Base64 or URL
+  IMG_URL_TYPE: process.env.NEXT_PUBLIC_IMG_TYPE || 'Notion', // This configuration has been invalidated, please do not use it; the Amazon solution is no longer supported, only supports the NOTION solution. ['NOTION', 'Amazon'] Site Picture Prefix default NOTION: (https://notion.so/images/xx) ， AMAZON(https://s3.us-west-2.amazonaws.com/xxx)
+  IMG_SHADOW: process.env.NEXT_PUBLIC_IMG_SHADOW || false, // Whether the picture picture is automatically added to the shadow
 
   // 开发相关
   NOTION_ACCESS_TOKEN: process.env.NOTION_ACCESS_TOKEN || '', // Useful if you prefer not to make your database public
-  DEBUG: process.env.NEXT_PUBLIC_DEBUG || false, // 是否显示调试按钮
-  ENABLE_CACHE: process.env.ENABLE_CACHE || process.env.npm_lifecycle_event === 'build', // 缓存在开发调试和打包过程中选择性开启，正式部署开启此功能意义不大。
+  DEBUG: process.env.NEXT_PUBLIC_DEBUG || false, // Whether to display the debug button
+  ENABLE_CACHE: process.env.ENABLE_CACHE || process.env.npm_lifecycle_event === 'build', // Selective opening in the process of development, commissioning and packing, and formal deployment to open this function is not significant。
   isProd: process.env.VERCEL_ENV === 'production', // distinguish between development and production environment (ref: https://vercel.com/docs/environment-variables#system-environment-variables)  isProd: process.env.VERCEL_ENV === 'production' // distinguish between development and production environment (ref: https://vercel.com/docs/environment-variables#system-environment-variables)
-  VERSION: process.env.NEXT_PUBLIC_VERSION // 版本号
+  VERSION: process.env.NEXT_PUBLIC_VERSION // version number
+
 }
 
 module.exports = BLOG
