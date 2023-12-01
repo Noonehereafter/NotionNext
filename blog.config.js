@@ -258,9 +258,9 @@ const BLOG = {
 
   // utterance
   COMMENT_UTTERRANCES_REPO:
-        process.env.NEXT_PUBLIC_COMMENT_UTTERRANCES_REPO || '', // Your code warehouse name, for example, I am 'Tangly1024/Notionnext'; more documentation refers to https://utteranc.es/
+        process.env.NEXT_PUBLIC_COMMENT_UTTERRANCES_REPO || 'Noonehereafter/notionchat', // Your code warehouse name, for example, I am 'Tangly1024/Notionnext'; more documentation refers to https://utteranc.es/
 
-  // giscus @see https://giscus.app/
+  // giscus @see c
   COMMENT_GISCUS_REPO: process.env.NEXT_PUBLIC_COMMENT_GISCUS_REPO || '', // Your Github warehouse name E.G 'Tangly1024/NOTIONNEXT'
   COMMENT_GISCUS_REPO_ID: process.env.NEXT_PUBLIC_COMMENT_GISCUS_REPO_ID || '', // Your github repo ID e.g (you can see it after setting GISCUS)
   COMMENT_GISCUS_CATEGORY_ID:
