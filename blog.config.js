@@ -5,29 +5,29 @@ const BLOG = {
         process.env.NOTION_PAGE_ID || 'a66d4a535117410080a2ba0742bbae4a',
   PSEUDO_STATIC: process.env.NEXT_PUBLIC_PSEUDO_STATIC || false, // The pseudo -static path, all articles URL ended at HTML after opening。
   NEXT_REVALIDATE_SECOND: process.env.NEXT_PUBLIC_REVALIDATE_SECOND || 3, // Update the content cache separate unit (second); that is, each page has a pure static period of 5 seconds, no matter how many access this period, it will not capture the NOTION data; the value of the larger value will help save Vercel resources and increase the access rate at the same time , But it will also make the article update delay。
-  THEME: process.env.NEXT_PUBLIC_THEME || 'simple', // The current theme, you can find all the support themes under the themes folder; the theme name is the folder name, such as Example, Fukasawa, Gitbook, Heo, Hexo, LANDING, Matery, Medium, Next, Nobelium, Plog, Simpler, Simpler
-  THEME_SWITCH: process.env.NEXT_PUBLIC_THEME_SWITCH || false, // Whether to display the switch theme button
+  THEME: process.env.NEXT_PUBLIC_THEME || 'Hexo', // The current theme, you can find all the support themes under the themes folder; the theme name is the folder name, such as Example, Fukasawa, Gitbook, Heo, Hexo, LANDING, Matery, Medium, Next, Nobelium, Plog, Simpler, Simpler
+  THEME_SWITCH: process.env.NEXT_PUBLIC_THEME_SWITCH || true, // Whether to display the switch theme button
   LANG: process.env.NEXT_PUBLIC_LANG || 'en-US', // e.g 'zh-CN','en-US'  see /lib/lang.js for more.
-  SINCE: process.env.NEXT_SINCE || 2021, // e.g if leave this empty, current year will be used.
+  SINCE: process.env.NEXT_SINCE || 2023, // e.g if leave this empty, current year will be used.
   APPEARANCE: process.env.NEXT_PUBLIC_APPEARANCE || 'light', // ['light', 'dark', 'auto'], // light Day mode, dark night mode, Auto automatic night mode according to time and theme
   APPEARANCE_DARK_TIME: process.env.NEXT_PUBLIC_APPEARANCE_DARK_TIME || [18, 6], // From the night mode to time, turn off the night mode automatically according to time
 
   // After version 3.14.1, welcome to configuration here, and the English comma is separated to support multiple welcome typing effects。
-  GREETING_WORDS: process.env.NEXT_PUBLIC_GREETING_WORDS || 'Hi, I am a programmer, hi, I am a worker, hi, I am a dry food man, welcome to my blog ',
+  GREETING_WORDS: process.env.NEXT_PUBLIC_GREETING_WORDS || 'To the cold moon and back, Noone was there ! ',
 
-  CUSTOM_MENU: process.env.NEXT_PUBLIC_CUSTOM_MENU || false, // Support the Menu type. From the 3.12.0 version, each theme will gradually support flexible secondary menu configuration to replace the original Page type. This configuration is the test function, the default shutdown is closed。
+  CUSTOM_MENU: process.env.NEXT_PUBLIC_CUSTOM_MENU || true, // Support the Menu type. From the 3.12.0 version, each theme will gradually support flexible secondary menu configuration to replace the original Page type. This configuration is the test function, the default shutdown is closed。
 
-  AUTHOR: process.env.NEXT_PUBLIC_AUTHOR || 'NotionNext', // Your nickname, such as tangly1024
-  BIO: process.env.NEXT_PUBLIC_BIO || '一个普通的干饭人🍚', // About the Author
-  LINK: process.env.NEXT_PUBLIC_LINK || 'https://tangly1024.com', // Website address
-  KEYWORDS: process.env.NEXT_PUBLIC_KEYWORD || 'Notion, 博客', // Website keyword English comma is separated
+  AUTHOR: process.env.NEXT_PUBLIC_AUTHOR || 'Noone', // Your nickname, such as tangly1024
+  BIO: process.env.NEXT_PUBLIC_BIO || 'Noone on the moon', // About the Author
+  LINK: process.env.NEXT_PUBLIC_LINK || 'https://coldmoon.vercel.app', // Website address
+  KEYWORDS: process.env.NEXT_PUBLIC_KEYWORD || 'Noone, cold moon', // Website keyword English comma is separated
 
   // 社交链接，不需要可留空白，例如 CONTACT_WEIBO:''
   CONTACT_EMAIL: process.env.NEXT_PUBLIC_CONTACT_EMAIL || '', // Email address, such as mail@tangly1024.com
   CONTACT_WEIBO: process.env.NEXT_PUBLIC_CONTACT_WEIBO || '', // Your Weibo personal homepage
   CONTACT_TWITTER: process.env.NEXT_PUBLIC_CONTACT_TWITTER || '', // Your Twitter personal homepage
   CONTACT_GITHUB: process.env.NEXT_PUBLIC_CONTACT_GITHUB || '', // Your github personal homepage, such as https://github.com/tangly1024
-  CONTACT_TELEGRAM: process.env.NEXT_PUBLIC_CONTACT_TELEGRAM || '', // Your Telegram address, such as https://t.me/tangly_1024
+  CONTACT_TELEGRAM: process.env.NEXT_PUBLIC_CONTACT_TELEGRAM || 'https://t.me/Clarkmann09', // Your Telegram address, such as https://t.me/tangly_1024
   CONTACT_LINKEDIN: process.env.NEXT_PUBLIC_CONTACT_LINKEDIN || '', // Your LinkedIn homepage
   CONTACT_INSTAGRAM: process.env.NEXT_PUBLIC_CONTACT_INSTAGRAM || '', // Your Instagram address
   CONTACT_BILIBILI: process.env.NEXT_PUBLIC_CONTACT_BILIBILI || '', // Station B homepage
